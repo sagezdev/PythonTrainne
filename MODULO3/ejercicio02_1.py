@@ -1,18 +1,21 @@
 count = 0
 sumaNota = 0
+situacion = ""
 print('Bienvenido a tu portal')
-while count < 5:
+while count < 4:
     nota = float(input('Ingrese su nota: '))
     sumaNota = nota + sumaNota
     count = count + 1
     if(count == 4):
         porcentaje = float(input('Ingresa tu % de asistencia: '))
-        totalNota = sumaNota / 4
+        totalNota = round(sumaNota / 4, 1)
         if(totalNota > 4 and porcentaje > 75):
-            print(f'Feliciades pasaste el curso con una nota de: {totalNota} y %{porcentaje} de asistencia fue')
+            situacion = 'Aprobado'
         elif(totalNota < 4 and porcentaje > 75):
-            print(f'Reprobaste por tu nota fue un: {totalNota}')
+            situacion = 'Reprobado por Nota'
         elif(totalNota > 4 and porcentaje < 75):
-            print(f'Reprobaste por tu % de asistencia: {porcentaje}')
-        else:
-            print(f'Sigue participando tu nota final fue:{totalNota}  y %{porcentaje} de asistencia fue')
+           situacion = 'Reprobado por porcentaje'
+    else:
+        situacion = 'Sigue participando'
+        
+print(f'{situacion}, Nota: {totalNota} , Asistencia: {porcentaje}')
