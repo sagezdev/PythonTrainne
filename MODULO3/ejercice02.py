@@ -12,13 +12,17 @@ nota3 = float(input('Ingrese su tercera nota: '))
 nota4 = float(input('Ingrese su ultima nota: '))
 
 porcentaje = float(input('ingrese el porcentaje de asistencia: '))
-
-
+situacion = ''
 # se suma  el total de notas y se divide por 4 
 sumaNotas = nota1 + nota2 + nota3 + nota4
-totalNotas = sumaNotas / 4 
+totalNotas = round(sumaNotas / 4,1) 
 
-if(totalNotas > 4 and porcentaje > 75):
-    print('Felicidades pasaste el curso')
+
+if(totalNotas >= 4 and porcentaje >= 75):
+    situacion = 'Felicidades aprobaste'
 else:
-    print('No pudiste pasar el curso.. vuelvo a intetar mas tarde')
+    situacion = 'Reprobaste el curso'
+    
+print(f'Promedio: {totalNotas}')
+print(f'Asistencia: {porcentaje}%')
+print(situacion)
