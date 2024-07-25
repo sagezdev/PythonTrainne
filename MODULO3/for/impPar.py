@@ -13,3 +13,7 @@ situacion = ['par' if numero % 2 == 0 else 'impar' for numero in numeros]
 for i in range(len(numeros)):
     print(f'{numeros[i]} \t {situacion[i]}')
     
+pares = [numero for numero in numeros if numero % 2 == 0]
+print(sorted(pares,reverse=True))
+pares.sort()
+print(pares)
