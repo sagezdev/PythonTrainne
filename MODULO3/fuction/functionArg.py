@@ -10,5 +10,3 @@ def suma(*args):
 
 print(suma([1,23,4]))
 print(suma(1,23,4))
-
-
