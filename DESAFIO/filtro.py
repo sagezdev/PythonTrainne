@@ -20,7 +20,7 @@ def filtrar(diccionario, umbral, mayor_que = True):
     return filtro
 
 if len(sys.argv) == 2:
-    print(f'Los productos mayores al umbral son:{', '.join(filtrar(precios,umbral))}')
+    print(f'Los productos mayores al umbral son: {', '.join(filtrar(precios,umbral)) }')
 else:
     if(sys.argv[2] == 'mayor'):
         print(f'Los productos mayores al umbral son:{', '.join(filtrar(precios,umbral,True))}')
